@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaCar, FaHome } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
-const MailNavbar = () => {
+const MainNavbar = () => {
   return (
-    <div className=' border-2 mt-1 pt-6 bg-black flex justify-between px-16'>
-      <div className='Left text-white  gap-10 mb-6 ml flex'>
+    <div className='border-2 mt-1 pt-6 bg-black flex justify-between px-16'>
+      <div className='Left text-white gap-10 mb-6 ml flex'>
         <div className='flex items-center'>
           <FaCar />
           <h1 className='ml-2'>Free Shipping</h1>
@@ -20,13 +21,13 @@ const MailNavbar = () => {
         </div>
       </div>
       <div className='Center'></div>
-      <div className='Right text-white  flex'>
-        <h1 className='mr-4'>Dowload Our Apps</h1>
-        <h1 className='mr-4'>Store Locator</h1>
-        <h1>Help</h1>
+      <div className='Right text-white flex'>
+        <Link to="/download-apps" className='mr-4'>Dowload Our Apps</Link>
+        <Link to="/store-locator" className='mr-4'>Store Locator</Link>
+        <Link to="/help">Help</Link>
       </div>
     </div>
   );
 };
 
-export default MailNavbar;
+export default MainNavbar;
